@@ -1,6 +1,6 @@
 node {
 
-    def mvnHome = tool 'Maven3'
+    def mvnHome = tool 'Maven'
 
     stage ('Checkout') {
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'e2f1b466-b418-42ac-84a8-b6d6a5857928', url: 'https://github.com/surya0249/eks-project.git']]])
